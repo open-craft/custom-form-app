@@ -15,16 +15,16 @@ class ExtraInfo(models.Model):
         ('vim', 'Vim'),
         ('emacs', 'Emacs'),
         ('np', 'Notepad'),
-        ('cat', 'cat > filename')
+        ('cat', 'cat > filename'),
     )
 
     favorite_movie = models.CharField(
-        verbose_name="Fav Flick", max_length=100, error_messages={
-            "required": u"Please tell us your favorite movie.",
-            "invalid": u"We're pretty sure you made that movie up."
-        }
+        verbose_name="Fav Flick",
+        max_length=100,
     )
     favorite_editor = models.CharField(
-        verbose_name="Favorite Editor", choices=FAVORITE_EDITOR, blank=True, 
-        max_length=5
+        verbose_name="Favorite Editor",
+        choices=FAVORITE_EDITOR,
+        blank=True, 
+        max_length=5,
     )
